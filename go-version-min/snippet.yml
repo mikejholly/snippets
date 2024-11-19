@@ -1,0 +1,14 @@
+version: 0
+
+name: Require min Go version
+description: Test a previously captured Go version
+
+action:
+  language: typescript
+  main: index.ts
+  imports: package.json
+
+inputs:
+  min-version:
+    description:
+      The minimum required version

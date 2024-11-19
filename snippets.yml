@@ -1,1 +1,21 @@
-hi
+version: 0
+
+groups:
+  main:
+    repositories:
+      - github.com/mikejholly/*
+    branches:
+      - main
+      - feature/*
+
+metadata:
+  - run: github://mikejholly/snippets/go-version@latest
+    on: main
+    hook: before-command
+    command: ^go build .*
+
+policy:
+  - run: github://mikejholly/snippets/go-version-min@latest
+    on: main
+    using:
+      min-version: 1.22.0
