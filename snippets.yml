@@ -9,13 +9,13 @@ groups:
       - feature/*
 
 metadata:
-  - run: github://mikejholly/snippets/go-version@latest
+  - run: github://mikejholly/snippets/go-version@main
     on: main
     hook: before-command
     command: ^go build .*
 
 policy:
-  - run: github://mikejholly/snippets/go-version-min@latest
+  - run: github://mikejholly/snippets/go-version-min@main
     on: main
     using:
       min-version: 1.22.0
