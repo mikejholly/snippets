@@ -4,6 +4,5 @@ name: Go version
 description: Captures the Go version used to build code
 
 action:
-  language: typescript
-  main: index.ts
-  imports: package.json
+  language: node
+  main: index.js

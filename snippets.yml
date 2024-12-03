@@ -9,11 +9,19 @@ groups:
       - mh/*
 
 metadata:
+  - code: |
+      echo '{"key": "value"}'
+    language: bash
+    on: main
+    hook: |
+      before-command:^whoami.*
   - run: github://mikejholly/snippets/go-version@main
     on: main
-    hook: "before-command:^whoami.*"
+    hook: |
+      before-command:^whoami.*
 
 policy:
+
   - run: github://mikejholly/snippets/go-version-min@main
     on: main
     using:
