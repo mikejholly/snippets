@@ -1,2 +1,2 @@
 
-console.log(JSON.stringify({foo: bar}));
+console.log(JSON.stringify({foo: "bar"}));
