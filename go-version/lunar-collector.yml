@@ -1,0 +1,7 @@
+version: 0
+
+description: Capture the installed Go version
+author: mikejholly@gmail.com
+
+collectors:
+  - runBash: lunar collect go_version "$(go version)"

@@ -1,8 +1,0 @@
-version: 0
-
-name: Go version
-description: Captures the Go version used to build code
-
-action:
-  language: node
-  main: index.js

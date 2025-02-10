@@ -1,0 +1,26 @@
+version: 0
+
+domains:
+  main:
+    description: The one and only domain
+    owner: mikejholly@gmail.com
+  main.child:
+    description: The child of main
+    owner: mikejholly@gmail.com
+
+components:
+  github.com/my-org/my-repo:
+    owner: mikejholly@gmail.com
+    domain: main
+    branch: main
+    tags: [go, backend]
+
+collectors:
+  - uses: ./go-version
+    on: ["domain:main"]
+  - runBash: lunar collect go_version $("go version")
+    on: ["domain:main"]
+
+policy:
+  - mainBash: ./main.bash
+    on: main
