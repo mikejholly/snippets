@@ -28,7 +28,9 @@ collectors:
   - uses: github://mikejholly/snippets-2/earthly-version@main
   - runBash: lunar collect go_version $("go version")
     on: ["domain:main"]
-
+    hook:
+      type: ci-before-command
+      pattern: ^go build.*
 
 policies:
   - mainBash: ./main.bash
