@@ -23,4 +23,4 @@ collectors:
 
 policies:
   - mainBash: ./main.bash
-    on: main
+    on: ["domain:main"]
