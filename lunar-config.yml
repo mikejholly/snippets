@@ -21,6 +21,6 @@ collectors:
   - runBash: lunar collect go_version $("go version")
     on: ["domain:main"]
 
-policy:
+policies:
   - mainBash: ./main.bash
     on: main
