@@ -5,6 +5,6 @@ author: mikejholly@gmail.com
 
 collectors:
   - runBash: lunar collect go_version_2 "$(go version)"
-    hook:
+    hooks:
       - type: ci-before-job
         pattern: .*
