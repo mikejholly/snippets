@@ -4,4 +4,7 @@ description: Capture the installed Go version
 author: mikejholly@gmail.com
 
 collectors:
-  - runBash: lunar collect go_version "$(go version)"
+  - runBash: lunar collect go_version_2 "$(go version)"
+    hook:
+      - type: ci-before-job
+        pattern: .*
