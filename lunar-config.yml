@@ -3,14 +3,14 @@ version: 0
 domains:
   main:
     description: The one and only domain
-    owner: mikejholly@gmail.com
+    owner: mike@earthly.dev
   main.child:
     description: The child of main
-    owner: mikejholly@gmail.com
+    owner: mike@earthly.dev
 
 components:
   github.com/my-org/my-repo:
-    owner: mikejholly@gmail.com
+    owner: mike@earthly.dev
     domain: main
     branch: main
     tags: [go, backend]
@@ -18,8 +18,10 @@ components:
 collectors:
   - uses: ./go-version
     on: ["domain:main"]
-  - uses: github://mikejholly/snippets-2/go-version@main
-  - uses: github://mikejholly/snippets-2/earthly-version@main
+  - uses: github://projects/snippets-2/go-version@main
+    on: [go]
+  - uses: github://projects/snippets-2/earthly-version@main
+    on: [backend]
   - runBash: lunar collect go_version_1 $("go version")
     on: ["domain:main"]
     hook:
