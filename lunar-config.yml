@@ -18,9 +18,9 @@ components:
 collectors:
   - uses: ./go-version
     on: ["domain:main"]
-  - uses: github://projects/snippets-2/go-version@main
+  - uses: github://mikejholly/snippets-2/go-version@main
     on: [go]
-  - uses: github://projects/snippets-2/earthly-version@main
+  - uses: github://mikejholly/snippets-2/earthly-version@main
     on: [backend]
   - runBash: lunar collect go_version_1 $("go version")
     on: ["domain:main"]
